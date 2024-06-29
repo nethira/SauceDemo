@@ -1,0 +1,103 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 41.62 s <<< FAILURE! -- in TestSuite
+com.qa.runner.TestRunner.runScenario["Successful login with valid credentials", "Login Page"](1) -- Time elapsed: 0.189 s <<< FAILURE!
+java.lang.AssertionError
+	at com.google.gson.internal.LinkedTreeMap.replaceInParent(LinkedTreeMap.java:318)
+	at com.google.gson.internal.LinkedTreeMap.rotateLeft(LinkedTreeMap.java:408)
+	at com.google.gson.internal.LinkedTreeMap.rebalance(LinkedTreeMap.java:349)
+	at com.google.gson.internal.LinkedTreeMap.removeInternal(LinkedTreeMap.java:294)
+	at com.google.gson.internal.LinkedTreeMap.removeInternal(LinkedTreeMap.java:261)
+	at com.google.gson.internal.LinkedTreeMap.removeInternalByKey(LinkedTreeMap.java:302)
+	at com.google.gson.internal.LinkedTreeMap.remove(LinkedTreeMap.java:134)
+	at com.aventstack.extentreports.gherkin.GherkinDialect.<init>(GherkinDialect.java:26)
+	at com.aventstack.extentreports.gherkin.GherkinDialectManager.setLanguage(GherkinDialectManager.java:76)
+	at com.aventstack.extentreports.ExtentReports.setGherkinDialect(ExtentReports.java:446)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.createFeature(ExtentCucumberAdapter.java:314)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.handleStartOfFeature(ExtentCucumberAdapter.java:307)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.handleTestCaseStarted(ExtentCucumberAdapter.java:161)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.access$100(ExtentCucumberAdapter.java:63)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:107)
+	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:104)
+	at io.cucumber.core.eventbus.AbstractEventPublisher.send(AbstractEventPublisher.java:51)
+	at io.cucumber.core.eventbus.AbstractEventBus.send(AbstractEventBus.java:12)
+	at io.cucumber.core.runtime.SynchronizedEventBus.send(SynchronizedEventBus.java:47)
+	at io.cucumber.core.runtime.ThreadLocalRunnerSupplier$LocalEventBus.send(ThreadLocalRunnerSupplier.java:62)
+	at io.cucumber.core.runner.TestCase.emitTestCaseStarted(TestCase.java:206)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:72)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+com.qa.runner.TestRunner.runScenario["Unsuccessful login with invalid credentials", "Login Page"](2) -- Time elapsed: 20.26 s <<< FAILURE!
+java.lang.AssertionError: expected [Epic sadface: Username and password do not match any user in this srevice] but found [Epic sadface: Username and password do not match any user in this service]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.qa.stepdefinitions.LoginPageDefinition.user_should_display_error_message_as(LoginPageDefinition.java:70)
+	at ✽.User should display error message as "Epic sadface: Username and password do not match any user in this srevice"(file:///C:/Users/shreenethira/eclipse-workspace/CucumberTest/src/test/java/com/qa/features/LoginPage.feature:35)
+
+com.qa.runner.TestRunner1.runScenario["Unsuccessful login with invalid credentials", "Login Page"](2) -- Time elapsed: 20.49 s <<< FAILURE!
+java.lang.AssertionError: expected [Epic sadface: Username and password do not match any user in this srevice] but found [Epic sadface: Username and password do not match any user in this service]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.qa.stepdefinitions.LoginPageDefinition.user_should_display_error_message_as(LoginPageDefinition.java:70)
+	at ✽.User should display error message as "Epic sadface: Username and password do not match any user in this srevice"(file:///C:/Users/shreenethira/eclipse-workspace/CucumberTest/src/test/java/com/qa/features/LoginPage.feature:35)
+
+com.qa.runner.TestRunner1.runScenario["Successful login with valid credentials", "Login Page"](3) -- Time elapsed: 20.63 s <<< FAILURE!
+java.lang.AssertionError: expected [Product] but found [Products]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.qa.stepdefinitions.LoginPageDefinition.user_should_land_on_products_page(LoginPageDefinition.java:57)
+	at ✽.User should land on Products Page(file:///C:/Users/shreenethira/eclipse-workspace/CucumberTest/src/test/java/com/qa/features/LoginPage.feature:29)
+
+com.qa.runner.TestRunner2.runScenario["Unsuccessful login with invalid credentials", "Login Page"](1) -- Time elapsed: 8.875 s <<< FAILURE!
+java.lang.AssertionError: expected [Epic sadface: Username and password do not match any user in this srevice] but found [Epic sadface: Username and password do not match any user in this service]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.qa.stepdefinitions.LoginPageDefinition.user_should_display_error_message_as(LoginPageDefinition.java:70)
+	at ✽.User should display error message as "Epic sadface: Username and password do not match any user in this srevice"(file:///C:/Users/shreenethira/eclipse-workspace/CucumberTest/src/test/java/com/qa/features/LoginPage.feature:35)
+
+com.qa.runner.TestRunner2.runScenario["Successful login with valid credentials", "Login Page"](2) -- Time elapsed: 9.202 s <<< FAILURE!
+java.lang.AssertionError: expected [Product] but found [Products]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at org.testng.Assert.assertEquals(Assert.java:666)
+	at com.qa.stepdefinitions.LoginPageDefinition.user_should_land_on_products_page(LoginPageDefinition.java:57)
+	at ✽.User should land on Products Page(file:///C:/Users/shreenethira/eclipse-workspace/CucumberTest/src/test/java/com/qa/features/LoginPage.feature:29)
+
